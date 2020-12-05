@@ -6,11 +6,6 @@ namespace DialogueSystem
 {
     public class Dialogue
     {
-        
-        public string Chapter { get { return _chapter; } }
-        public string Part { get { return _part; } }
-        public List<Speech> Speeches { get { return _speeches; } }
-
         private string _chapter;
         private string _part;
         private List<Speech> _speeches = new List<Speech>();
@@ -20,6 +15,16 @@ namespace DialogueSystem
             _chapter = chapter;
             _part = part;
             _speeches = speeches;
+        }
+
+        public void WriteContent()
+        {
+            System.Console.WriteLine(_chapter);
+            System.Console.WriteLine(_part);
+            foreach(Speech s in _speeches)
+            {
+                System.Console.WriteLine(s);
+            }
         }
     }
 }
