@@ -23,7 +23,7 @@ namespace DialogueSystem
             System.Console.WriteLine(_part);
             foreach (Speech s in _speeches)
             {
-                System.Console.WriteLine(s.Text);
+                System.Console.WriteLine(_speeches.FindIndex(x => x == s) +  ". " + s.Text);
             }
         }
     }
